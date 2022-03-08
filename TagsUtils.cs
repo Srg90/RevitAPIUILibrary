@@ -23,7 +23,20 @@ namespace RevitAPIUILibrary
                 .Cast<FamilySymbol>()
                 .ToList();
             return familySymbols;
+        }
 
+        public static List<FamilySymbol> GetViewTagTypes(ExternalCommandData commandData)
+        {
+            UIApplication uiapp = commandData.Application;
+            UIDocument uidoc = uiapp.ActiveUIDocument;
+            Document doc = uidoc.Document;
+
+            var familySymbols = new FilteredElementCollector(doc)
+                .OfCategory(BuiltInCategory.OST_ViewportLabel)
+                .OfClass(typeof(FamilySymbol))
+                .Cast<FamilySymbol>()
+                .ToList();
+            return familySymbols;
         }
     }
 }
