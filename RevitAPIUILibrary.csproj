@@ -67,6 +67,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="RevitAPI">
       <HintPath>..\..\..\..\..\Program Files\Autodesk\Revit 2022\RevitAPI.dll</HintPath>
     </Reference>
@@ -88,6 +89,7 @@
     <Compile Include="FamilyInstanceUtils.cs" />
     <Compile Include="FamilySymbolUtils.cs" />
     <Compile Include="FilterUtils.cs" />
+    <Compile Include="FormatsUtils.cs" />
     <Compile Include="FurnitureUtils.cs" />
     <Compile Include="LevelsUtils.cs" />
     <Compile Include="PipesUtils.cs" />
